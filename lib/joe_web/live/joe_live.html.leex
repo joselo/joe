@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <%= for user <- @users do %>
+      <tr>
+        <td>
+          <%= user.name %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div>
+  <form phx-submit="send">
+    <input type="text" name="name" required/>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
